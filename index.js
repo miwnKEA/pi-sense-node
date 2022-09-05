@@ -14,23 +14,7 @@ app.use(express.static("assets"));
 /** LED display **/
 
 
-const O = [0, 0, 0];
-const X = [0, 255, 0];
-
-const welcome = [
-	O, O, O, O, O, O, O, O,
-	O, X, X, O, O, X, X, O,
-	O, X, X, O, O, X, X, O,
-	O, O, O, O, O, O, O, O,
-	X, X, O, O, O, O, X, X,
-	X, X, X, X, X, X, X, X,
-	O, X, X, X, X, X, X, O,
-	O, O, O, O, O, O, O, O,
-];
-
 matrixLib.showMessage("Hej!", 0.1, [0, 0, 255])
-
-matrixLib.clear();
 
 
 /** Joystick **/
