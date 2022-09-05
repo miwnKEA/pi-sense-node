@@ -1,5 +1,5 @@
 # pi-sense-node
-Raspberry Pi project with Sense HAT and Node.js.
+Raspberry Pi projekt med Sense HAT og Node.js.
 
 ## Installere NGINX på Raspberry Pi
 
