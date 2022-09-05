@@ -113,6 +113,7 @@ sudo iptables -A INPUT -p tcp --dport 3000 -j DROP
 Skriv følgende i terminalen og husk at være inde i den rigtige mappe på Raspberry Pi.
 
 ```
+sudo apt-get install sense-hat
 sudo npm install nodeimu
 sudo npm install node-sense-hat
 sudo npm install ejs
