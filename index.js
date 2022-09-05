@@ -90,7 +90,7 @@ function createPayload(data) {
 
 
 app.get('/', (req, res) => {
-	res.render('home', { data: lastMeasures });
+	res.render('index', { data: lastMeasures });
 });
 
 app.post('/data', (req, res) => {
