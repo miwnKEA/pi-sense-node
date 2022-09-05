@@ -52,8 +52,6 @@ function getSensorsData(e, data) {
 function requestData() {
   setTimeout(() => {
     tic = new Date()
-    utc = tic.getTime()
-
     IMU.getValue(getSensorsData)
   }, TIMEOUT - (new Date() - tic))
 }
