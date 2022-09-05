@@ -57,7 +57,7 @@ app.listen(port, () => {
 nodejs index.js
 ```
 
-Applikationen afsluttes ved at trykke CTRL+C
+Applikationen afsluttes ved at trykke CTRL+C.
 
 ## Konfigurere NGINX server til localhost:3000
 
@@ -142,19 +142,19 @@ Find IP adressen med:
 hostname -I
 ```
 
-Hent sensordata i JSON:
+Hent sensordata i JSON.
 
 ```
 curl -X GET http://192.168.1.XXX/data
 ```
 
-Opret ny sensordata:
+Opret ny sensordata.
 
 ```
 curl -X POST http://192.168.1.XXX/data
 ```
 
-Skift LED display:
+Skift LED display.
 
 ```
 curl -X POST http://192.168.1.XXX/matrix/cross
