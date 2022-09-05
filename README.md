@@ -110,4 +110,39 @@ npm list
 
 ## Åben filerne index.js, views/index.ejs og assets/style.css i Geany på Raspberry Pi
 
-Hent koden ind fra GitHub repositoriet.
+Hent koden ind fra GitHub repositoriet og kør projektet.
+
+```
+nodejs index.js
+```
+
+## Lav CURL request op imod en Application Programming Interface (API)
+
+XXX i IP adressen 192.168.1.XXX skal udskiftes med korrekte sidste tre cifre.
+
+Find IP adressen med:
+
+```
+hostname -I
+```
+
+Hent sensordata i JSON:
+
+```
+curl -X GET http://192.168.1.XXX/data
+```
+
+Opret ny sensordata:
+
+```
+curl -X POST http://192.168.1.XXX/data
+```
+
+Skift LED display:
+
+```
+curl -X POST http://192.168.1.XXX/matrix/cross
+curl -X POST http://192.168.1.XXX/matrix/heart
+curl -X POST http://192.168.1.XXX/matrix/smiley
+curl -X POST http://192.168.1.XXX/matrix/clear
+```
