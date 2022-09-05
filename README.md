@@ -161,6 +161,12 @@ touch style.css
 cd ..
 ```
 
+[Link til index.js](https://github.com/miwnKEA/pi-sense-node/blob/main/index.js)
+
+[Link til views/index.ejs](https://github.com/miwnKEA/pi-sense-node/blob/main/views/index.ejs)
+
+[Link til public/style.css](https://github.com/miwnKEA/pi-sense-node/blob/main/assets/style.css)
+
 Hent koden ind fra GitHub repositoriet og kør projektet.
 
 ```
