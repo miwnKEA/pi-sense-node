@@ -4,12 +4,15 @@ Raspberry Pi projekt med Sense HAT og Node.js.
 ## Lokalt netværk
 
 navn: KEA_IOT_ROUTER_1
+
 adgangskode: MONSTER1
 
 ## Raspberry Pi
 
 hostname: DigiKon_1 til 5
+
 brugernavn: pi
+
 adgangskode: raspberry
 
 Sat op med IP addresserne 192.168.1.121 til 192.168.1.125 på netværket.
