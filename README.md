@@ -89,7 +89,7 @@ Afslut med CTRL+X og Y for ja.
 sudo systemctl restart nginx
 ```
 
-## Installer IPtables og opsæt IP regler for sikkerhed på port 3000
+## Installer iptables og opsæt IP regler for sikkerhed på port 3000
 
 ```
 sudo apt-get install iptables 
