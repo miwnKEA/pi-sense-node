@@ -1,0 +1,51 @@
+<html>
+<head>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Sensor Data</h2>
+
+<form action="/data" method="post">
+<button type="submit" formmethod="post">Collect data</button>
+</form>
+
+<p>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Temperature</th>
+    <th>Humidity</th>
+    <th>Pressure</th>
+  </tr>
+  	<% data.forEach((data) => { %>
+	<tr>
+	<td><%= data.date %></td>
+	<td><%= data.temperature %></td>
+	<td><%= data.humidity %></td>
+	<td><%= data.pressure %></td>
+	</tr>
+	<% }); %>
+</table>
+
+<h2>LED display</h2>
+
+<form action="/matrix/cross" method="post">
+<button type="submit" formmethod="post">Cross</button>
+</form>
+
+<form action="/matrix/heart" method="post">
+<button type="submit" formmethod="post">Heart</button>
+</form>
+
+<form action="/matrix/smiley" method="post">
+<button type="submit" formmethod="post">Smiley</button>
+</form>
+
+<form action="/matrix/clear" method="post">
+<button type="submit" formmethod="post">Clear</button>
+</form>
+
+</body>
+</html>
