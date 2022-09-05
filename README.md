@@ -11,6 +11,8 @@ sudo systemctl start nginx
 hostname -I
 ```
 
+Prøv at åbne denne IP adresse i en browser (skal være på samme netværk som Raspberry Pi).
+
 ## Installere Node.js og Node Package Manager (NPM) på Raspberry Pi
 
 ```
