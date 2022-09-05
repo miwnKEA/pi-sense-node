@@ -26,12 +26,16 @@ npm -v
 
 ## Lav folder til vores projekt på Raspberry Pi og installer Express i projektet
 
+Kør følgende kommandoer i Terminalen.
+
 ```
 mkdir server && cd server
 npm init -y
 npm install express --save
 touch index.js
 ```
+
+Åben filen index.js i programmet Beany under 'Programming' i menuen.
 
 ```
 const express = require("express"); 
@@ -53,11 +57,17 @@ app.listen(port, () => {
 nodejs index.js
 ```
 
+Applikationen afsluttes ved at trykke CTRL+C
+
 ## Konfigurere NGINX server til localhost:3000
+
+Skriv følgende i Terminalen.
 
 ```
 sudo nano /etc/nginx/sites-enabled/default 
 ```
+
+Indsæt følgende konfiguration for 'location'. Resten er det samme.
 
 ```
 server { 
@@ -81,7 +91,7 @@ server {
 }
 ```
 
-Afslut med CTRL+X og Y for ja.
+Afslut ved at trykke CTRL+X og tryk Y for at gemme.
 
 ## Restart NGINX server bagefter
 
@@ -100,6 +110,8 @@ sudo iptables -A INPUT -p tcp --dport 3000 -j DROP
 
 ## Installer dependencies for programkoden i projektet
 
+Skriv følgende i terminalen og husk at være inde i den rigtige mappe på Raspberry Pi.
+
 ```
 sudo npm install nodeimu
 sudo npm install node-sense-hat
@@ -115,6 +127,10 @@ Hent koden ind fra GitHub repositoriet og kør projektet.
 ```
 nodejs index.js
 ```
+
+Applikationen vil nu være tilgængelig gennem IP adressen for Raspberry Pi via NGINX serveren.
+
+Åben IP adressen i en browser.
 
 ## Lav CURL request op imod en Application Programming Interface (API)
 
