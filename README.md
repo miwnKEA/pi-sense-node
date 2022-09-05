@@ -1,6 +1,25 @@
 # pi-sense-node
 Raspberry Pi projekt med Sense HAT og Node.js.
 
+## Lokalt netværk
+
+navn: KEA_IOT_ROUTER_1
+adgangskode: MONSTER1
+
+## Raspberry Pi
+
+hostname: DigiKon_1 til 5
+brugernavn: pi
+adgangskode: raspberry
+
+Sat op med IP addresserne 192.168.1.121 til 192.168.1.125 på netværket.
+
+Prøv Secure Shell (ssh) fra terminalen på Mac med kommandoen:
+
+```
+ssh pi@192.168.1.XXX
+```
+
 ## Installere NGINX på Raspberry Pi
 
 ```
@@ -124,6 +143,20 @@ npm list
 ```
 
 ## Åben filerne index.js, views/index.ejs og assets/style.css i Geany på Raspberry Pi
+
+- mkdir laver en ny mappe 
+- cd skifter mappe
+- touch laver en ny fil
+- cd .. går en mappe tilbage
+
+```
+mkdir views && cd views
+touch index.ejs
+cd ..
+mkdir assets && cd assets
+touch style.css
+cd ..
+```
 
 Hent koden ind fra GitHub repositoriet og kør projektet.
 
