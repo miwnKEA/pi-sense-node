@@ -106,6 +106,8 @@ sudo apt-get install iptables
 
 sudo iptables -A INPUT -p tcp -s localhost --dport 3000 -j ACCEPT 
 sudo iptables -A INPUT -p tcp --dport 3000 -j DROP
+
+sudo iptables -L
 ```
 
 ## Installer dependencies for programkoden i projektet
