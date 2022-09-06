@@ -6,7 +6,7 @@
 
 <h2>Sensor Data</h2>
 
-<form action="/data" method="post">
+<form action="/data" method="POST">
 <button type="submit" formmethod="post">Collect data</button>
 </form>
 
@@ -31,19 +31,24 @@
 
 <h2>LED display</h2>
 
-<form action="/matrix/cross" method="post">
+<form action="/matrix/message" method="POST">
+    <input type="text" name="message" placeholder="Write message">
+    <button type="submit" formmethod="post">Send</button>
+</form>
+
+<form action="/matrix/cross" method="POST">
 <button type="submit" formmethod="post">Cross</button>
 </form>
 
-<form action="/matrix/heart" method="post">
+<form action="/matrix/heart" method="POST">
 <button type="submit" formmethod="post">Heart</button>
 </form>
 
-<form action="/matrix/smiley" method="post">
+<form action="/matrix/smiley" method="POST">
 <button type="submit" formmethod="post">Smiley</button>
 </form>
 
-<form action="/matrix/clear" method="post">
+<form action="/matrix/clear" method="POST">
 <button type="submit" formmethod="post">Clear</button>
 </form>
 
