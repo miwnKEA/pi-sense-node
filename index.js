@@ -2,13 +2,13 @@ const express = require('express');
 const nodeimu = require('nodeimu');
 const matrixLib = require('node-sense-hat').Leds;
 const joystickLib = require('node-sense-hat').Joystick;
-var util = require('util');
-const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.static("assets"));
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 
 /** LED display **/
@@ -31,12 +31,10 @@ joystickLib.getJoystick().then(joystick => {
 
 
 const TIMEOUT = 1000
-const TOTAL_MEASURES = 50
 
 var IMU = new nodeimu.IMU()
 let tic = new Date()
 let lastMeasures = []
-let measures = []
 
 requestData()
 
@@ -83,6 +81,11 @@ app.post('/data', (req, res) => {
 app.get('/data', (req, res) => {
 	res.json(lastMeasures)
 });
+
+app.post('/matrix/message', function (req, res) {
+    const msg = req.body.message 
+    matrixLib.showMessage(msg, 0.1, [0, 0, 255])
+  });
 
 app.post('/matrix/cross', (req, res) => {
 	const O = [0, 0, 0];
